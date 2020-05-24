@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+body {
+    background: url('images/pirate.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: auto; */
+}
+
+.sidenav {
+    position: fixed;
+    width: 20vw;
+    height: 100%;
+    background: rgba(79, 186, 212, 0.788);
+    font-family: 'Girassol', cursive;
+    padding-top: 20px;
+    color: rgb(231, 207, 207);
+    text-transform: uppercase;
+    text-align: center;
+    /* overflow-y: scroll; */
+}
+
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(231, 207, 207);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: .3s all ease-in-out;
+  }
+
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: rgb(240, 158, 111);
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+    height: 450px;
+    overflow-y: scroll;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  @media only screen and (max-width: 860px) {
+      .sidenav .text {
+          font-size: 12px;
+          transition: .3s ease-in-out;
+      }
+  }
+  @media only screen and (max-width: 660px) {
+      .sidenav .text {
+          display: none;
+          transition: .3s ease-in-out;
+      }
+
+      .dropdown-container {
+          overflow: hidden;
+      }
+
+      .dropdown-container a{
+          font-size: 16px;
+      }
+
+  }
+
+/* Header */
+#header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.one {
+    grid-column: 1;
+    grid-row: 1/4;
+    background: url('images/opop.jpg') no-repeat center center/cover;
+    height: 80vh;
+    background-size: 100%;
+    /* position: relative; */
+}
+
+@media only screen and (max-width: 960px) {
+    .one {
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .one {
+        grid-column: 1;
+    grid-row: 1/4;
+    background: url('images/op.jpg') no-repeat;
+    background-size: 100%;
+    height: 30vh;
+    /* position: relative; */
+    }
+}
+
+/* Bottom-head */
+#bottom-head {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    /* gap: 10px; */
+    /* border: rgba(79, 186, 212, 0.788); */
+    text-align: start;
+}
+
+#div-two {
+    background-color: rgba(212, 79, 79, 0.404);
+    border: 1px solid rgba(79, 186, 212, 0.788);
+    transition: .3s ease-in-out;
+}
+
+#div-two:hover {
+    background-color: rgba(3, 2, 2, 0.404);
+    border: 1px solid rgba(79, 186, 212, 0.788);
+    color: rgb(208, 230, 217);
+}
+#div-three {
+    background-color: rgba(212, 79, 79, 0.404);
+    border: 1px solid rgba(79, 186, 212, 0.788);
+    transition: .3s ease-in-out;
+}
+
+#div-three:hover {
+    background-color: rgba(3, 2, 2, 0.404);
+    border: 1px solid rgba(79, 186, 212, 0.788);
+    color: rgb(208, 230, 217);
+}
+
+
+.two {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    padding-top: 10px;
+    /* padding: 0; */
+}
+
+.three {
+    grid-column: 4/6;
+    grid-row: 1/2;
+    padding-top: 10px;
+    /* align-self: center; */
+    /* padding: 42.5px; */
+}
+
+#bottom-head p {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 2rem;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 920px) {
+    #bottom-head p {
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 1rem;
+    }
+}
+@media only screen and (max-width: 660px) {
+    #bottom-head p {
+        font-size: 12px;
+    }
+}
+
+/* Container */
+
+
+
+#container {
+    display: grid;
+    grid-gap: 5px;
+    margin: 0 auto;
+    padding: 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    text-align: center;
+    font-family: 'Girassol', cursive;
+    font-size: 34px;
+    align-items: center;
+}
+
+#container div {
+    border-radius: 50%;
+    margin: 0;
+    padding: 12px;
+    /* padding: 25px; */
+    background-color: rgba(228, 219, 101, 0.788);
+    border: 1.5px solid rgba(238, 0, 0, 0.788);
+    box-shadow: -5px 10px 10px 10px rgba(3, 2, 2, 0.404);
+}
+
+#container div:hover {
+    background-color: rgba(4, 7, 8, 0.788);
+    color: seashell;
+    transition: .3s ease-in-out;
+}
+
+.first {
+    grid-column: 3/5;
+    margin-right: 45px;
+    background-color: rgba(79, 185, 212, 0.384);
+}
+
+.four {
+    grid-row: 2;
+    grid-column: 2/3;
+    align-self: center;
+}
+
+
+.five {
+    grid-row: 2;
+    grid-column: 3/4;
+}
+
+.six {
+    grid-row: 2;
+    grid-column: 4/5;
+}
+
+.seven {
+    grid-row: 2;
+    grid-column: 5/6;
+}
+
+.eight {
+    grid-row: 3;
+    grid-column: 2/3;
+}
+
+.nine {
+    grid-row: 3;
+    grid-column: 3/4;
+}
+
+.ten {
+    grid-row: 3;
+    grid-column: 4/5;
+}
+
+.eleven {
+    grid-row: 3;
+    grid-column: 5/6;
+}
+
+.twelve {
+    grid-row: 4;
+    grid-column: 2/3;
+}
+
+.thirteen {
+    grid-row: 4;
+    grid-column: 3/4;
+}
+
+.fourteen {
+    grid-row: 4;
+    grid-column: 4/5;
+}
+
+.fifteen {
+    grid-row: 4;
+    grid-column: 5/6;
+}
+
+div a img {
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 1020px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 28px;
+    }
+
+    #container div {
+        grid-column: 2/3;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    #container div:nth-child(odd) {
+        grid-column: 4/5;
+        /* margin-right: 100px; */
+        /* width: 100%;
+        margin: 0;
+        padding: 10px; */
+    }
+
+    
+.first {
+    grid-column: 2/5;
+}
+
+.four {
+    grid-row: 2;
+    align-self: center;
+}
+
+
+.five {
+    grid-row: 2;
+}
+
+.six {
+    grid-row: 3;
+}
+
+.seven {
+    grid-row: 3;
+}
+
+.eight {
+    grid-row: 4;
+}
+
+.nine {
+    grid-row: 4;
+}
+
+.ten {
+    grid-row: 5;
+}
+
+.eleven {
+    grid-row: 5;
+}
+
+.twelve {
+    grid-row: 6;
+}
+
+.thirteen {
+    grid-row: 6;
+}
+
+.fourteen {
+    grid-row: 7;
+}
+
+.fifteen {
+    grid-row: 7;
+}
+}
+
+@media only screen and (max-width: 690px) {
+    div a img {
+        width: 85px;
+        height: 85px;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 12fr;
+        grid-row: 12fr;
+        font-size: 20px;
+        /* align-self: center; */
+        /* text-align: center; */
+    }
+
+    #container div {
+        grid-column: 3;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        /* height: 175%; */
+    }
+    
+    #container div:nth-child(odd) {
+        grid-column: 3;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        /* height: 175%; */
+    }
+
+    
+.first {
+    grid-column: 3/4;
+    padding: 0;
+    margin: 0;
+}
+
+.four {
+    grid-row: 4;
+    align-self: center;
+}
+
+
+.five {
+    grid-row: 5;
+}
+
+.six {
+    grid-row: 6;
+}
+
+.seven {
+    grid-row: 7;
+}
+
+.eight {
+    grid-row: 8;
+}
+
+.nine {
+    grid-row: 9;
+}
+
+.ten {
+    grid-row: 10;
+}
+
+.eleven {
+    grid-row: 11;
+}
+
+.twelve {
+    grid-row: 12;
+}
+
+.thirteen {
+    grid-row: 13;
+}
+
+.fourteen {
+    grid-row: 14;
+}
+
+.fifteen {
+    grid-row: 15;
+}
+}
